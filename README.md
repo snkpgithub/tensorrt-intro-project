@@ -1,30 +1,76 @@
-# TensorRT for Beginners: A Jupyter Notebook Walkthrough
+# 🚀 TensorRT for Beginners: Speeding Up YOLOv5 Inference
 
-Beginner-friendly tutorial for Tensor-RT using pyTorch on YOLO-V5.
-Comparing deep learning compilation inference speed up and (dynamic) batching.
+A beginner-friendly Jupyter Notebook walkthrough on how to accelerate deep learning inference using **TensorRT** and **YOLOv5** with PyTorch.
 
-Video walkthrough and high-level explanation:
+This tutorial explores:
+- ⚡ Inference speed comparison (PyTorch vs TensorRT)
+- 📦 Dynamic batching for faster execution
+- 🔧 End-to-end setup for TensorRT optimization
 
-[![Youtube video link](https://img.youtube.com/vi/qAuRG0DBCNM/0.jpg)](https://youtu.be/qAuRG0DBCNM)
+---
 
+## 🎯 Overview
 
-# Speeding Up Inference with TensorRT and YOLOv5
+This project is designed to help you understand how to deploy and optimize a YOLOv5 object detection model using NVIDIA’s TensorRT for faster inference. You’ll start with standard GPU inference using PyTorch, then convert the model to a TensorRT-optimized version, and finally apply batching to gain even more performance.
 
-This Jupyter notebook demonstrates how to accelerate the inference process of YOLOv5 object detection model using NVIDIA's TensorRT. The notebook walks through the installation of necessary libraries, preparation of the COCO validation dataset, and execution of the model on a sample set of images. It also explores the process of converting the PyTorch model to a TensorRT-optimized model to achieve faster inference times.
+---
 
-## Prerequisites
-- NVIDIA GPU with CUDA support
-- PyTorch and Torch-TensorRT installed (will be installed in the notebook as well)
+## 🛠️ Prerequisites
 
-## Model Loading and Inference
-The YOLOv5s model is loaded and preprocessed to run inference on a subset of the COCO validation dataset. The inference process is initially performed on a GPU to establish a baseline performance metric.
+To run this notebook, make sure your system has:
 
-#### Accelerating Inference with TensorRT
-The notebook further demonstrates how to convert the YOLOv5s model to a TensorRT-optimized model, reducing inference times significantly. A detailed comparison of inference times before and after optimization is provided.
+- ✅ NVIDIA GPU with CUDA support
+- ✅ PyTorch installed
+- ✅ Torch-TensorRT installed (also installable via the notebook)
 
-#### Batching Inference
-To improve efficiency, the notebook illustrates how to perform inference on batches of images. This approach leverages TensorRT's capabilities to further decrease the inference time per image.
+---
 
-#### Results
-A comparison of the average inference times across different setups (baseline, TensorRT-optimized, and batched inference with TensorRT) is included, showcasing the performance gains achieved through optimization.
-Finally, the notebook visualizes the speed-up achieved through TensorRT optimization and batching using a bar chart, providing a clear and comparative view of the performance improvements.
+## 📂 What's Inside
+
+### 1. **Model Loading & Baseline Inference**
+- Load the `YOLOv5s` model (PyTorch version)
+- Run inference on a few COCO validation images
+- Measure baseline GPU inference time
+
+### 2. **TensorRT Optimization**
+- Convert the PyTorch model to a TensorRT engine
+- Run optimized inference
+- Compare speed with baseline
+
+### 3. **Batch Inference**
+- Perform inference on batches of images
+- Leverage TensorRT's dynamic batching
+- Observe reduction in average inference time per image
+
+### 4. **Performance Visualization**
+- Plot a bar chart comparing:
+  - PyTorch (baseline)
+  - TensorRT optimized
+  - TensorRT + Batching
+- Clear visualization of speedup achieved
+
+---
+
+## 📊 Results Snapshot
+
+| Setup                     | Avg. Inference Time (ms/image) |
+|--------------------------|-------------------------------|
+| PyTorch (baseline)       | High                          |
+| TensorRT Optimized       | Lower                         |
+| TensorRT + Batching      | Fastest                       |
+
+---
+
+## 📺 Video Walkthrough *(Optional)*
+
+*A link to a demo video or high-level explanation can be added here if available.*
+
+---
+
+## 📌 Final Note
+
+This project is a great starting point for anyone exploring **model optimization** and **real-time inference acceleration** using NVIDIA tools. Perfect for deployment engineers, ML researchers, and developers getting into high-performance AI inference.
+
+---
+
+### 👤 Maintainer: [snkpgithub](https://github.com/snkpgithub)
